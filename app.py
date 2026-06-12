@@ -11,6 +11,8 @@ from pathlib import Path
 from datetime import datetime
 from requests.exceptions import RequestException
 from urllib.parse import quote
+from google import genai
+from openai import OpenAI
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
