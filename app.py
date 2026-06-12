@@ -16,7 +16,6 @@ from openai import OpenAI
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-st.write("Available secrets:", list(st.secrets.keys()))
 # -----------------------------
 # App Config
 # -----------------------------
