@@ -11,14 +11,6 @@ from pathlib import Path
 from datetime import datetime
 from requests.exceptions import RequestException
 from urllib.parse import quote
-try:
-    from openai import OpenAI
-except ImportError:
-    OpenAI = None
-try:
-    from google import genai
-except ImportError:
-    genai = None
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -537,31 +529,36 @@ st.markdown("""
 
 # ------------------------
 
-def ask_ollama(prompt, model):
+def ask_ollama(prompt, model, base_url):
     try:
-        r = requests.post(
-            "http://localhost:11434/api/generate",
+        response = requests.post(
+            f"{base_url}/api/generate",
             json={
                 "model": model,
                 "prompt": prompt,
-                "stream": False
-            }
+                "stream": False,
+            },
+            timeout=120,
         )
 
-        return r.json()["response"]
+        return response.json()["response"]
 
     except Exception as e:
         return str(e)
 
-
 def ask_openai(prompt, api_key):
     try:
+        from openai import OpenAI
+
         client = OpenAI(api_key=api_key)
 
         response = client.chat.completions.create(
             model="gpt-4.1-mini",
             messages=[
-                {"role": "user", "content": prompt}
+                {
+                    "role": "user",
+                    "content": prompt
+                }
             ]
         )
 
@@ -570,16 +567,21 @@ def ask_openai(prompt, api_key):
     except Exception as e:
         return str(e)
 
-
 def ask_gemini(prompt, api_key):
-    client = genai.Client(api_key=api_key)
+    try:
+        from google import genai
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
-    )
+        client = genai.Client(api_key=api_key)
 
-    return response.text
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt
+        )
+
+        return response.text
+
+    except Exception as e:
+        return str(e)
 
 
 # --------------------------
