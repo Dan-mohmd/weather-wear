@@ -1,0 +1,30 @@
+temp_min_c,temp_max_c,weather_condition,style,top,bottom,footwear,accessory,outerwear,notes
+35,50,sunny,casual,Lightweight linen shirt,Shorts or light cotton trousers,Sandals or breathable sneakers,Sunglasses,None,Stay hydrated — light colors preferred
+35,50,sunny,formal,Light breathable dress shirt (white/pale),Slim-fit trousers (linen or cotton blend),Loafers or oxfords,Sunglasses,None,Opt for linen fabric; avoid dark suits
+35,50,sunny,outdoor,Moisture-wicking dry-fit tee,Athletic shorts or joggers,Trail runners or sports sandals,Cap or wide-brim hat,None,Apply sunscreen; UV-protective clothing recommended
+35,50,sunny,date,Flowy sundress or open-collar shirt,Linen shorts or midi skirt,Strappy sandals or espadrilles,Sunglasses,None,Go for breezy fabrics; avoid polyester
+28,34,sunny,casual,Cotton t-shirt or polo,Jeans or chinos,Sneakers or loafers,Sunglasses,Light denim jacket (evening),Comfortable and stylish for warm weather
+28,34,sunny,formal,Oxford shirt or blouse,Chinos or tailored trousers,Derby shoes or heels,Watch,Light blazer,Smart casual works well in this range
+28,34,sunny,outdoor,Sports tee or tank top,Cargo shorts or athletic pants,Running shoes,Baseball cap,Packable windbreaker,Great weather for outdoor activities
+28,34,sunny,date,Casual button-down or sleeveless top,Midi skirt or slim chinos,Loafers or block-heel sandals,Minimalist necklace,Light cardigan,Relaxed yet put-together look
+18,27,partly_cloudy,casual,T-shirt or light long-sleeve,Jeans or casual trousers,Sneakers or boots,None,Light jacket or hoodie,Ideal layering weather
+18,27,partly_cloudy,formal,Dress shirt with rolled sleeves,Trousers or formal skirt,Smart shoes or heeled boots,Watch or bracelet,Blazer,Classic smart-casual palette works well
+18,27,partly_cloudy,outdoor,Long-sleeve moisture-wicking top,Joggers or hiking pants,Trail shoes or sneakers,Sunglasses,Windbreaker,Perfect temp for running or hiking
+18,27,partly_cloudy,date,Blouse or fitted tee,High-waist jeans or flowy skirt,Ankle boots or white sneakers,Stud earrings,Leather jacket or denim jacket,Versatile — dress up or down easily
+10,17,cloudy,casual,Long-sleeve tee or sweatshirt,Jeans or joggers,Sneakers or casual boots,Beanie,Light puffer or fleece jacket,Cozy layered look
+10,17,cloudy,formal,Dress shirt + sweater or turtleneck,Tailored trousers,Oxford shoes or ankle boots,Scarf,Wool blazer or overcoat,Smart and warm; earthy tones work well
+10,17,cloudy,outdoor,Thermal base layer + fleece top,Insulated hiking pants,Waterproof boots or trail shoes,Buff/neck gaiter,Softshell jacket,Dress in breathable layers
+10,17,cloudy,date,Knit sweater or turtleneck,Dark jeans or tailored trousers,Chelsea boots or loafers,Statement watch or necklace,Wool coat or trench,Cozy-chic aesthetic
+0,9,rainy,casual,Thick hoodie or fleece pullover,Water-resistant trousers or jeans,Waterproof boots or wellies,Umbrella,Rain jacket or parka,Prioritize waterproof gear
+0,9,rainy,formal,Dress shirt + wool sweater,Formal trousers,Leather shoes (waterproofed) or ankle boots,Umbrella,Trench coat or wool overcoat,Choose dark or neutral tones; avoid suede
+0,9,rainy,outdoor,Moisture-wicking thermal top,Waterproof hiking pants,Waterproof trail boots,Rain hat or hood,Waterproof shell jacket,Full rain protection essential
+0,9,rainy,date,Cozy turtleneck or blouse under cardigan,Dark jeans or tailored pants,Ankle boots (waterproof),Umbrella,Classic trench coat,Rainy day dates call for effortless chic
+-10,-1,snowy,casual,Thermal undershirt + chunky knit sweater,Insulated jeans or snow pants,Snow boots,Warm beanie + gloves,Heavy puffer coat,Warmth over style — layer up!
+-10,-1,snowy,formal,Dress shirt + turtleneck,Wool trousers,Insulated dress boots,Leather gloves,Tailored wool overcoat,Merino wool keeps warmth without bulk
+-10,-1,snowy,outdoor,Thermal base layer + fleece mid-layer,Insulated waterproof ski pants,Insulated waterproof boots,Balaclava + ski goggles,Ski jacket or heavy shell,Full cold-weather protection required
+-10,-1,snowy,date,Cozy knit dress or thick blouse,Fleece-lined leggings or wool trousers,Knee-high boots,Warm beanie or earmuffs,Fur-lined or sherpa coat,Warm and stylish — think winter wonderland
+28,34,rainy,casual,Light waterproof tee or quick-dry shirt,Quick-dry shorts or joggers,Waterproof sandals or sneakers,Compact umbrella,Lightweight rain poncho,Tropical rain — light and waterproof
+28,34,rainy,formal,Breathable dress shirt,Formal trousers (quick-dry fabric),Leather shoes with waterproofing,Compact umbrella,Slim trench coat,Humid rain requires breathable fabrics
+18,27,windy,casual,Light long-sleeve or hoodie,Jeans or chinos,Sneakers,None,Windproof jacket,Avoid loose tops that catch the wind
+18,27,foggy,casual,Layered tee + light sweater,Jeans,Boots or closed sneakers,None,Light jacket,Visibility can be low — wear bright or light colors
+28,34,humid,casual,Breathable moisture-wicking tank or tee,Loose cotton shorts or linen pants,Flip flops or breathable sandals,Hair tie / clip,None,Natural fabrics are key; avoid synthetics

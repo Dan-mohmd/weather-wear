@@ -1,0 +1,2 @@
+location,country,latitude,longitude,temperature,feels_like,humidity,weather_condition,weather_description,wind_speed,fetched_at
+New Delhi,IN,28.6138954,77.2090057,37.26,38.18,30,Sunny,Clear Sky,1.57,2026-06-12 19:12:43
