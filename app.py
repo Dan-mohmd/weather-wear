@@ -530,7 +530,7 @@ st.markdown("""
 
 # ------------------------
 
-def ask_ollama(prompt, model):
+def ask_ollama(prompt, model="llama3"):
     try:
         r = requests.post(
             "http://localhost:11434/api/generate",
