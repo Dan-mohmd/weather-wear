@@ -11,6 +11,14 @@ from pathlib import Path
 from datetime import datetime
 from requests.exceptions import RequestException
 from urllib.parse import quote
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
+try:
+    from google import genai
+except ImportError:
+    genai = None
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -468,13 +476,7 @@ if st.session_state.weather:
 # AI Chat-bot
 # ------------------
 
-import streamlit as st
-import requests
-try:
-    from openai import OpenAI
-except ImportError:
-    OpenAI = None
-from google import genai
+
 
 # --------------------------
 # SESSION STATES
