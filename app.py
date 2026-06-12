@@ -470,7 +470,10 @@ if st.session_state.weather:
 
 import streamlit as st
 import requests
-from openai import OpenAI
+try:
+    from openai import OpenAI
+except ImportError:
+    OpenAI = None
 from google import genai
 
 # --------------------------
