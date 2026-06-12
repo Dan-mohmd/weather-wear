@@ -531,19 +531,18 @@ st.markdown("""
 
 # ------------------------
 
-def ask_ollama(prompt, model, base_url):
+def ask_ollama(prompt, model):
     try:
-        response = requests.post(
-            f"{base_url}/api/generate",
+        r = requests.post(
+            "http://localhost:11434/api/generate",
             json={
                 "model": model,
                 "prompt": prompt,
-                "stream": False,
-            },
-            timeout=120,
+                "stream": False
+            }
         )
 
-        return response.json()["response"]
+        return r.json()["response"]
 
     except Exception as e:
         return str(e)
