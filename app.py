@@ -13,6 +13,7 @@ from urllib.parse import quote
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+st.write("Available secrets:", list(st.secrets.keys()))
 # -----------------------------
 # App Config
 # -----------------------------
