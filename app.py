@@ -1,4 +1,4 @@
-﻿# app.py
+# app.py
 
 import streamlit as st
 import pandas as pd
@@ -539,7 +539,7 @@ def ask_ollama(prompt, model):
 
 def ask_openai(prompt, api_key):
     try:
-        client = OpenAI(api_key=OPENAI_API_KEY)
+        client = OpenAI(api_key=api_key)
 
         response = client.chat.completions.create(
             model="gpt-4.1-mini",
