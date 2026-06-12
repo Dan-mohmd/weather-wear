@@ -6,6 +6,7 @@ import requests
 import urllib3
 import base64
 import requests
+import os
 from pathlib import Path
 from datetime import datetime
 from requests.exceptions import RequestException
@@ -169,12 +170,18 @@ WEATHER_CODES = {
 # -----------------------------
 class WeatherTransformer:
     def __init__(self):
-        if "OPENWEATHER_API_KEY" not in st.secrets:
-            st.error("OpenWeather API key not configured.")
+        self.api_key = os.getenv("OPENWEATHER_API_KEY")
+
+        if not self.api_key:
+            self.api_key = st.text_input(
+                "Enter OpenWeather API Key",
+                type="password"
+            )
+
+        if not self.api_key:
+            st.warning("Please enter an OpenWeather API key.")
             st.stop()
-
-        self.api_key = st.secrets["OPENWEATHER_API_KEY"]
-
+            
     def get_coordinates(self, location):
         geo_url = "https://api.openweathermap.org/geo/1.0/direct"
 
