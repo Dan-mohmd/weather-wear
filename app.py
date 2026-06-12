@@ -172,7 +172,7 @@ WEATHER_CODES = {
 # -----------------------------
 class WeatherTransformer:
     def __init__(self):
-        self.api_key = "1a36b2d05745ab30a90785c8657896d7"
+        self.api_key = st.secrets["OPENWEATHER_API_KEY"]
 
         if not self.api_key:
             self.api_key = st.text_input(
