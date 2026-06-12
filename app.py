@@ -169,10 +169,10 @@ WEATHER_CODES = {
 class WeatherTransformer:
     def __init__(self):
         if "OPENWEATHER_API_KEY" not in st.secrets:
-    st.error("OpenWeather API key not configured.")
-    st.stop()
+            st.error("OpenWeather API key not configured.")
+            st.stop()
 
-self.api_key = st.secrets["OPENWEATHER_API_KEY"]
+        self.api_key = st.secrets["OPENWEATHER_API_KEY"]
 
     def get_coordinates(self, location):
         geo_url = "https://api.openweathermap.org/geo/1.0/direct"
