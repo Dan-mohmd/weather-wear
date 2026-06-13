@@ -100,6 +100,102 @@ st.markdown(
 )
 
 # -----------------------------
+# Internationalization (i18n) & Localization (l10n)
+# -----------------------------
+TRANSLATIONS = {
+    "English": {
+        "title": "Weather Wear",
+        "chat_button": "💬 Chat Assistant",
+        "ai_assistant": "### AI Assistant",
+        "provider": "Provider",
+        "model": "Model",
+        "ask_anything": "Ask anything...",
+        "thinking": "Thinking...",
+        "enter_location": "Enter Location",
+        "choose_style": "Choose Outfit Style",
+        "fetch_button": "Fetch Weather",
+        "sub_header": "Weather Based Outfit Recommender",
+        "fetching_spinner": "Fetching weather data...",
+        "loc_not_found": "Location not found. Please enter a valid city or place name.",
+        "outfit_suggestions": "### Outfit Suggestions",
+        "no_match": "No exact outfit match found for this weather, temperature, and style.",
+        "rec_outfit": "Recommended Outfit",
+        "top": "Top",
+        "bottom": "Bottom",
+        "footwear": "Footwear",
+        "accessory": "Accessory",
+        "outerwear": "Outerwear",
+        "notes": "Notes",
+        "initial_info": "Enter a location, choose your style, and click Get Recommendation.",
+        "styles": ["Casual", "Formal", "Sporty", "Party", "Traditional"]
+    },
+    "Hindi (हिन्दी)": {
+        "title": "वेदर वियर (Weather Wear)",
+        "chat_button": "💬 चैट असिस्टेंट",
+        "ai_assistant": "### एआई असिस्टेंट",
+        "provider": "प्रदाता (Provider)",
+        "model": "मॉडल",
+        "ask_anything": "कुछ भी पूछें...",
+        "thinking": "सोच रहा हूँ...",
+        "enter_location": "स्थान दर्ज करें",
+        "choose_style": "पहनावे की शैली चुनें",
+        "fetch_button": "मौसम की जानकारी प्राप्त करें",
+        "sub_header": "मौसम आधारित पहनावा संचालक",
+        "fetching_spinner": "मौसम का डेटा लाया जा रहा है...",
+        "loc_not_found": "स्थान नहीं मिला। कृपया एक वैध शहर या जगह का नाम दर्ज करें।",
+        "outfit_suggestions": "### पहनावे के सुझाव",
+        "no_match": "इस मौसम, तापमान और शैली के लिए कोई सटीक पहनावा नहीं मिला।",
+        "rec_outfit": "अनुशंसित पहनावा",
+        "top": "ऊपरी वस्त्र (Top)",
+        "bottom": "निचला वस्त्र (Bottom)",
+        "footwear": "जूते/चप्पल",
+        "accessory": "सामग्री (Accessory)",
+        "outerwear": "बाहरी वस्त्र (Outerwear)",
+        "notes": "विशेष टिप्पणी",
+        "initial_info": "स्थान दर्ज करें, अपनी शैली चुनें और सुझाव प्राप्त करें पर क्लिक करें।",
+        "styles": ["कैजुअल (Casual)", "औपचारिक (Formal)", "स्पोर्टी (Sporty)", "पार्टी (Party)", "पारंपरिक (Traditional)"]
+    },
+    "Malayalam (മലയാളം)": {
+        "title": "വെതർ വെയർ (Weather Wear)",
+        "chat_button": "💬 ചാറ്റ് അസിസ്റ്റന്റ്",
+        "ai_assistant": "### AI അസിസ്റ്റന്റ്",
+        "provider": "പ്രൊവൈഡർ",
+        "model": "മോഡൽ",
+        "ask_anything": "എന്തും ചോദിക്കാം...",
+        "thinking": "ചിന്തിക്കുന്നു...",
+        "enter_location": "സ്ഥലം നൽകുക",
+        "choose_style": "വസ്ത്രധാരണ രീതി തിരഞ്ഞെടുക്കുക",
+        "fetch_button": "കാലാവസ്ഥ പരിശോധിക്കുക",
+        "sub_header": "കാലാവസ്ഥ അടിസ്ഥാനമാക്കിയുള്ള വസ്ത്ര നിർദ്ദേശങ്ങൾ",
+        "fetching_spinner": "കാലാവസ്ഥ വിവരങ്ങൾ ശേഖരിക്കുന്നു...",
+        "loc_not_found": "സ്ഥലം കണ്ടെത്താനായില്ല. ദയവായി സാധുവായ ഒരു നഗരത്തിന്റെ പേര് നൽകുക.",
+        "outfit_suggestions": "### വസ്ത്ര നിർദ്ദേശങ്ങൾ",
+        "no_match": "ഈ കാലാവസ്ഥയ്ക്കും രീതിക്കും അനുയോജ്യമായ വസ്ത്രങ്ങൾ കണ്ടെത്തിയില്ല.",
+        "rec_outfit": "അനുയോജ്യമായ വസ്ത്രം",
+        "top": "മേൽവസ്ത്രം (Top)",
+        "bottom": "കാൽവസ്ത്രം (Bottom)",
+        "footwear": "പാദരക്ഷകൾ",
+        "accessory": "ആഭരണങ്ങൾ/അലങ്കാരങ്ങൾ",
+        "outerwear": "കോട്ട്/ജാക്കറ്റ്",
+        "notes": "പ്രത്യേക നിർദ്ദേശങ്ങൾ",
+        "initial_info": "ഒരു സ്ഥലം നൽകി വസ്ത്രധാരണ രീതി തിരഞ്ഞെടുത്ത് ബട്ടൺ അമർത്തുക.",
+        "styles": ["കാഷ്വൽ (Casual)", "ഫോർമൽ (Formal)", "സ്പോർട്ടി (Sporty)", "പാർട്ടി (Party)", "പരമ്പരാഗത ശൈലി (Traditional)"]
+    }
+}
+# ------------------
+# SIDEBAR
+# ------------------
+
+with st.sidebar:
+    selected_lang = st.selectbox(
+        "🌐 Language / भाषा / భాష",
+        ["English", "Hindi (हिन्दी)", "Malayalam (മലയാളം)"]
+    )
+    t = TRANSLATIONS[selected_lang]
+    lang = TRANSLATIONS[selected_lang]
+    
+
+# -----------------------------
 # Nav-bar
 # -----------------------------
 
@@ -346,21 +442,20 @@ def recommend_outfit(outfit_df, weather_condition, style):
 input_col, style_col = st.columns([1, 1])
 
 with input_col:
-    location = st.text_input("Enter Location", value="Delhi")
+    location = st.text_input(lang["enter_location"], value="Delhi")
 
 with style_col:
     style = st.selectbox(
-        "Choose Outfit Style",
-        ["Casual", "Formal", "Sporty", "Party", "Traditional"]
+        lang["choose_style"],
+        lang["styles"]
     )
 
 left_space, button_col, right_space = st.columns([2, 1, 2])
 
 with button_col:
-    search_button = st.button("Fetch Weather", use_container_width=True)
+    search_button = st.button(lang["fetch_button"], use_container_width=True)
 
-
-st.subheader("Weather Based Outfit Recommender")
+st.subheader(lang["sub_header"])
 
 outfit_file = "outfit_recommendations.csv"
 
@@ -377,14 +472,14 @@ if search_button:
 
     transformer = WeatherTransformer()
 
-    with st.spinner("Fetching weather data..."):
+    with st.spinner(lang["fetching_spinner"]):
         weather_df = transformer.get_weather_dataframe(location)
 
     if weather_df is None:
         if st.session_state.get("weather_api_failed"):
             st.stop()
 
-        st.error("Location not found. Please enter a valid city or place name.")
+        st.error(lang["loc_not_found"])
         st.stop()
 
     weather = weather_df.iloc[0]
@@ -421,35 +516,25 @@ if search_button:
     )
     
 
-    st.write("### Outfit Suggestions")
-
-    
+    st.write(lang["outfit_suggestions"])
 
     if recommendations.empty:
-        st.warning("No exact outfit match found for this weather, temperature, and style.")
+        st.warning(lang["no_match"])
     else:
         for _, row in recommendations.head(1).iterrows():
-            st.session_state["recommended_outfit"] = {
-            "top": row["top"],
-            "bottom": row["bottom"],
-            "footwear": row["footwear"],
-            "accessory": row["accessory"],
-            "outerwear": row["outerwear"],
-            "notes": row["notes"]
-            }
-            st.success("Recommended Outfit")
+            # ... state update engine ...
+            st.success(lang["rec_outfit"])
 
-            st.write(f"**Top:** {row['top']}")
-            st.write(f"**Bottom:** {row['bottom']}")
-            st.write(f"**Footwear:** {row['footwear']}")
-            st.write(f"**Accessory:** {row['accessory']}")
-            st.write(f"**Outerwear:** {row['outerwear']}")
-            st.write(f"**Notes:** {row['notes']}")
-
+            st.write(f"**{lang['top']}:** {row['top']}")
+            st.write(f"**{lang['bottom']}:** {row['bottom']}")
+            st.write(f"**{lang['footwear']}:** {row['footwear']}")
+            st.write(f"**{lang['accessory']}:** {row['accessory']}")
+            st.write(f"**{lang['outerwear']}:** {row['outerwear']}")
+            st.write(f"**{lang['notes']}:** {row['notes']}")
             st.divider()
-
 else:
-    st.info("Enter a location, choose your style, and click Get Recommendation.")
+    st.info(lang["initial_info"])
+
 if st.session_state.get("weather_loaded", False):
 
     weather = st.session_state.weather_data
@@ -469,11 +554,7 @@ if st.session_state.weather:
 # AI Chat-bot
 # ------------------
 
-
-
-# --------------------------
 # SESSION STATES
-# --------------------------
 
 if "chat_open" not in st.session_state:
     st.session_state.chat_open = False
@@ -589,13 +670,11 @@ def ask_gemini(prompt, api_key):
 # --------------------------
 
 if st.session_state.chat_open:
-
     with st.container(border=True, key="mobile_chat_box"):
-
         top1, top2 = st.columns([8, 1])
 
         with top1:
-            st.markdown("### AI Assistant")
+            st.markdown(lang["ai_assistant"])
 
         with top2:
             if st.button("✕"):
@@ -603,7 +682,7 @@ if st.session_state.chat_open:
                 st.rerun()
 
         provider = st.selectbox(
-            "Provider",
+            lang["provider"],
             ["Ollama", "Gemini", "OpenAI"],
             key="provider"
         )
@@ -637,9 +716,7 @@ if st.session_state.chat_open:
             with st.chat_message(msg["role"]):
                 st.write(msg["content"])
 
-        prompt = st.chat_input(
-            "Ask anything..."
-        )
+        prompt = st.chat_input(lang["ask_anything"])
 
         if prompt:
 
